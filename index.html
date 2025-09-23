@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Minha Loja Virtual</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .produto-img {
+        width: 100%;
+        height: 180px;
+        object-fit: contain; /* mostra a imagem inteira */
+        background-color: #fff; /* fundo branco uniforme */
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- 🔝 Menu -->
+    <header class="p-3 bg-dark text-white">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a href="/" class="text-white text-decoration-none fs-4">🛒 Minha Loja</a>
+        <ul class="nav">
+          <li><a href="#eletronicos" class="nav-link text-white">Eletrônicos</a></li>
+          <li><a href="#roupas" class="nav-link text-white">Roupas</a></li>
+          <li><a href="#livros" class="nav-link text-white">Livros</a></li>
+          <li><a href="#acessorios" class="nav-link text-white">Acessórios</a></li>
+          <li><a href="#beleza" class="nav-link text-white">Beleza</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- 🛍️ Produtos -->
+    <main class="container my-4">
+
+      <!-- Eletrônicos -->
+      <h3 id="eletronicos" class="mb-3">Eletrônicos</h3>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        <!-- Produto 1 -->
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="https://m.media-amazon.com/images/I/81qOD8EZTjL.jpg" 
+                 class="produto-img card-img-top" alt="Smartphone OnePlus">
+            <div class="card-body">
+              <h5 class="card-title">Smartphone OnePlus</h5>
+              <p class="card-text">Smartphone potente com câmera de 64MP e tela AMOLED.</p>
+              <p class="text-muted">R$ 3.200,00</p>
+              <a href="#" class="btn btn-primary" title="Smartphone OnePlus" onclick="adicionarCarrinho('Smartphone OnePlus')">Adicionar no carrinho</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Produto 2 -->
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="https://m.media-amazon.com/images/I/41v3r5vaEYL._SY900_.jpg" 
+                 class="produto-img card-img-top" alt="Relógio Digital">
+            <div class="card-body">
+              <h5 class="card-title">Relógio Digital</h5>
+              <p class="card-text">Relógio digital moderno com cronômetro e resistência à água.</p>
+              <p class="text-muted">R$ 250,00</p>
+              <a href="#" class="btn btn-primary" title="Relógio Digital" onclick="adicionarCarrinho('Relógio Digital')">Adicionar no carrinho</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Roupas -->
+      <h3 id="roupas" class="mt-5 mb-3">Roupas</h3>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        <!-- Produto 3 -->
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="https://a-static.mlcdn.com.br/800x560/jaqueta-jeans-slim-feminina-malwee-ref-93026/lojarogersstore/15934892923/b69d8b1ca3dd1fffd1b5232e94148278.jpeg" 
+                 class="produto-img card-img-top" alt="Jaqueta Jeans">
+            <div class="card-body">
+              <h5 class="card-title">Jaqueta Jeans</h5>
+              <p class="card-text">Jaqueta jeans estilosa e confortável, ideal para todas as estações.</p>
+              <p class="text-muted">R$ 180,00</p>
+              <a href="#" class="btn btn-primary" title="Jaqueta Jeans" onclick="adicionarCarrinho('Jaqueta Jeans')">Adicionar no carrinho</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Livros -->
+      <h3 id="livros" class="mt-5 mb-3">Livros</h3>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        <!-- Produto 4 -->
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="https://m.media-amazon.com/images/I/71+zivhMZKL._UF1000,1000_QL80_.jpg" 
+                 class="produto-img card-img-top" alt="Livro Python">
+            <div class="card-body">
+              <h5 class="card-title">Livro Python</h5>
+              <p class="card-text">Aprenda programação em Python com exemplos práticos e exercícios.</p>
+              <p class="text-muted">R$ 89,90</p>
+              <a href="#" class="btn btn-primary" title="Livro Python" onclick="adicionarCarrinho('Livro Python')">Adicionar no carrinho</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Acessórios -->
+      <h3 id="acessorios" class="mt-5 mb-3">Acessórios</h3>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        <!-- Produto 5 -->
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="https://m.media-amazon.com/images/I/61CGHv6kmWL._AC_SL1500_.jpg" 
+                 class="produto-img card-img-top" alt="Fone de Ouvido Bluetooth">
+            <div class="card-body">
+              <h5 class="card-title">Fone de Ouvido Bluetooth</h5>
+              <p class="card-text">Fone sem fio com estojo de carregamento, ideal para música e chamadas.</p>
+              <p class="text-muted">R$ 199,00</p>
+              <a href="#" class="btn btn-primary" title="Fone de Ouvido Bluetooth" onclick="adicionarCarrinho('Fone de Ouvido Bluetooth')">Adicionar no carrinho</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Beleza -->
+      <h3 id="beleza" class="mt-5 mb-3">Beleza</h3>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        <!-- Produto 6 -->
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img src="https://imgs.extra.com.br/1536941623/1xg.jpg?imwidth=1000" 
+                 class="produto-img card-img-top" alt="Kit Skincare">
+            <div class="card-body">
+              <h5 class="card-title">Kit Skincare</h5>
+              <p class="card-text">Kit de cuidados faciais com creme hidratante e sérum revitalizante.</p>
+              <p class="text-muted">R$ 120,00</p>
+              <a href="#" class="btn btn-primary" title="Kit Skincare" onclick="adicionarCarrinho('Kit Skincare')">Adicionar no carrinho</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </main>
+
+    <!-- 🔻 Rodapé -->
+    <footer class="text-muted py-4 bg-light">
+      <div class="container text-center">
+        <p class="mb-1">© 2025 Minha Loja Virtual</p>
+        <p class="mb-0">Desenvolvido por Rogerio usando Bootstrap</p>
+      </div>
+    </footer>
+
+    <!-- ⚙️ Script JS -->
+    <script>
+      function adicionarCarrinho(produto) {
+        alert("O produto '" + produto + "' está em falta no momento.");
+      }
+    </script>
+
+  </body>
+</html>
